@@ -17,6 +17,12 @@ Movie::Movie(const char *name, int year, float score) {
     this->score = score;
 }
 
+Movie::Movie(const Movie &m) {
+    score = m.score;
+    year = m.year;
+    strcpy(name, m.name);
+}
+
 const char *Movie::getName(){
     return name;
 }
@@ -25,24 +31,20 @@ int Movie::getYear(){
     return year;
 }
 
-void Movie::setYear(int year) {
-    this->year = year;
-}
-
 float Movie::getScore(){
     return score;
-}
-
-void Movie::setScore(float score) {
-    this->score = score;
 }
 
 void Movie::setName(const char *name) {
     strcpy(this->name, name);
 }
 
-Movie::Movie(const Movie &m) {
-    score = m.score;
-    year = m.year;
-    strcpy(name, m.name);
+void Movie::setYear(int year) {
+    this->year = year;
 }
+
+void Movie::setScore(float score) {
+    this->score = score;
+}
+
+

@@ -21,13 +21,13 @@ public:
 
     int getYear();
 
-    void setYear(int year);
-
     float getScore();
 
-    void setScore(float score);
-
     void setName(const char* name);
+
+    void setYear(int year);
+
+    void setScore(float score);
 };
 
 
