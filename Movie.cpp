@@ -5,33 +5,27 @@
 #include "Movie.h"
 #include <string.h>
 
-Movie::Movie() {
+Movie::Movie() : year(0), score(0.0) {
     name[0] = '\0';
-    year = 0;
-    score = 0.0;
 }
 
-Movie::Movie(const char *name, int year, float score) {
+Movie::Movie(const char *name, int year, float score) : year(year), score(score) {
     strcpy(this->name, name);
-    this->year = year;
-    this->score = score;
 }
 
-Movie::Movie(const Movie &m) {
-    score = m.score;
-    year = m.year;
+Movie::Movie(const Movie &m) : year(m.year), score(m.score) {
     strcpy(name, m.name);
 }
 
-const char *Movie::getName(){
+const char *Movie::getName() {
     return name;
 }
 
-int Movie::getYear(){
+int Movie::getYear() {
     return year;
 }
 
-float Movie::getScore(){
+float Movie::getScore() {
     return score;
 }
 
