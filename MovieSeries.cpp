@@ -24,11 +24,10 @@ void MovieSeries::printMovies() {
 }
 
 void MovieSeries::sortMoviesByScore() {
-    Movie aux;
     for (int i = 0; i < size - 1; i++)
         for (int j = i + 1; j < size; j++)
             if (movies[i].getScore() < movies[j].getScore()) {
-                aux = movies[i];
+                Movie aux = movies[i];
                 movies[i] = movies[j];
                 movies[j] = aux;
             }
