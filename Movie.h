@@ -17,6 +17,10 @@ public:
     Movie(const char* name,int year,float score);
     Movie(const Movie &m);
 
+    Movie& operator=(const Movie& other);
+
+    void copy(const Movie& other);
+
     const char *getName();
 
     int getYear();
