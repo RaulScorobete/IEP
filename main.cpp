@@ -10,9 +10,9 @@ int main()
     Movie movie3("Avengers3",2018,8.5);
     Movie movie4("Avengers4",2019,8.2);
     series.addMovie(movie1);
-    series.addMovie(movie2);
+    series+=movie2;
     series.addMovie(movie3);
-    series.addMovie(movie4);
+    series+=movie4;
     movie4.setName("Avengers Endgame");
     series.addMovie(movie4);
     series.printMovies();

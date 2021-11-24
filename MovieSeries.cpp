@@ -32,3 +32,8 @@ void MovieSeries::sortMoviesByScore() {
                 movies[j] = aux;
             }
 }
+
+MovieSeries &MovieSeries::operator+=(const Movie &movie) {
+    addMovie(movie);
+    return *this;
+}
