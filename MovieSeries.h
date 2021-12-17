@@ -14,7 +14,6 @@ private:
 
 public:
     MovieSeries();
-    MovieSeries(const MovieSeries & ) = delete;
     MovieSeries& operator+=(const Movie& movie);
     void addMovie(Movie m);
     void printMovies();
